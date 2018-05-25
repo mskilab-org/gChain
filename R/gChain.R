@@ -17,6 +17,7 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
+#' @import data.table
 
 ########################
 # class::gChain
@@ -1151,7 +1152,7 @@ spChain = function(grl, rev = FALSE){
     gr.dt = as.data.table(grl)
     intA = GRanges(as.character(gr.dt$seqnames), IRanges(gr.dt$start, gr.dt$end), gr.dt$strand, seqlengths = seqlengths(grl))
 
-    out.dt = gr.dt[, .(
+    out.dt = gr.dt[, list(
         chr.A = seqnames,
         start.A = start,
         end.A = end,
@@ -2012,7 +2013,7 @@ copy = function(from, ## granges of source intervals
 
     if (any(strand(from) == '*')){
         warning('converting some * strands in "from" to +')
-        strand(from)[which(as.logical(strand(from)=='*'))] = '+';
+        strand(from)[which(     as.logical(strand(from)=='*'))] = '+';
     }
 
     if (is.character(to)){
@@ -2060,7 +2061,7 @@ copy = function(from, ## granges of source intervals
     } else {
         if (any(strand(to) == '*')){
             warning('converting some * strands in "to" to +')
-            strand(to)[which(strand(to)=='*')] = '+';
+            strand(to)[which(as.logical(strand(to)=='*'))] = '+';
         }
            
         ## vectorize
