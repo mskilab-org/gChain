@@ -16,6 +16,7 @@ Depends:
     rtracklayer, 
     Biostrings      
 Imports:
+    data.table,
     gUtils,
     bamUtils,
     GenomicAlignments, 
