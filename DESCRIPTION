@@ -7,7 +7,6 @@ Authors@R: c(person(given = "Jeremiah", family = "Wala", role = c("aut"), email 
     family = "Imielinski", role = c("aut", "cre"), email =
     "mimielinski@nygenome.org"))
 Description: R package providing additional capabilities and speed for GenomicRanges operations.
-biocViews:
 Remotes: 
   github::mskilab/gUtils,
   github::mskilab/gTrack,
