@@ -31,6 +31,7 @@ Imports:
     gTrack
 Suggests:
     BSgenome.Hsapiens.UCSC.hg19,
+    covr,
     testthat
 License: GPL-2
 BugReports: http://github.com/mskilab/gChain/issues
