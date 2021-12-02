@@ -15,7 +15,6 @@ Remotes:
   bioc::3.10/rtracklayer,
   bioc::3.10/GenomicAlignments,
   bioc::3.10/Biostrings,
-  bioc::3.10/BSgenome.Hsapiens.UCSC.hg19,
   bioc::3.10/GenomeInfoDb
 Depends:
     R (>= 3.1.0),
