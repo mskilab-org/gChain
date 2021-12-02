@@ -7,7 +7,15 @@ Authors@R: c(person(given = "Jeremiah", family = "Wala", role = c("aut"), email 
     family = "Imielinski", role = c("aut", "cre"), email =
     "mimielinski@nygenome.org"))
 Description: R package providing additional capabilities and speed for GenomicRanges operations.
-biocViews:
+Remotes: 
+  github::mskilab/gUtils,
+  github::mskilab/gTrack,
+  github::mskilab/bamUtils,
+  bioc::3.10/GenomicRanges,
+  bioc::3.10/rtracklayer,
+  bioc::3.10/GenomicAlignments,
+  bioc::3.10/Biostrings,
+  bioc::3.10/GenomeInfoDb
 Depends:
     R (>= 3.1.0),
     GenomicRanges (>= 1.18),
@@ -22,8 +30,9 @@ Imports:
     gTrack
 Suggests:
     BSgenome.Hsapiens.UCSC.hg19,
-    testthat,
+    covr,
+    testthat
 License: GPL-2
-BugReports: http://github.com/mskilab/gUtils/issues
+BugReports: http://github.com/mskilab/gChain/issues
 LazyData: true
 RoxygenNote: 7.1.0
